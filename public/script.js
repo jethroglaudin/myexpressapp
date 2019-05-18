@@ -31,8 +31,3 @@ const getAllUsers = () => {
             document.querySelector('#result').innerHTML = JSON.stringify(response.data)
         })
 }
-
-// function getUserInfo(){
-//    const input = document.getElementById("userName").value
-//    console.log(input)
-// }
