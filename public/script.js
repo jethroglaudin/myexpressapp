@@ -3,10 +3,11 @@ const getUserInfo = () => {
   console.log(input)
 
   //    console.log(`ES6 ${input}`)
-  const url = "/showprofile/" + input;
+  const url = "/username/?username=" + input;
 
   axios.get(url).then(response => {
-    document.querySelector("#userInfo").innerHTML = response.data;
+    document.querySelector("#userInfo").innerHTML = JSON.stringify(response.data);
+    console.log(response)
   });
 };
 
@@ -24,10 +25,10 @@ const handleSubmit = () => {
   });
 };
 
-const getAllUsers = () => {
-    const url3 = '/getallusers'; 
-    axios.get(url3)
-        .then(response => {
-            document.querySelector('#result').innerHTML = JSON.stringify(response.data)
-        })
-}
+// const getAllUsers = () => {
+//     const url3 = '/getallusers'; 
+//     axios.get(url3)
+//         .then(response => {
+//             document.querySelector('#result').innerHTML = JSON.stringify(response.data)
+//         })
+// }
