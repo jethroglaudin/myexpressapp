@@ -45,14 +45,14 @@ app.get('/username', (req, res) => {
     
 })
 
-app.get('/showprofile/:username', (req, res) => {
-    const user = req.params.username
-    User.find({ username: user })
-        .then(results => {
-            res.send(results)
-        })
-    console.log(user)
-})
+// app.get('/showprofile/:username', (req, res) => {
+//     const user = req.params.username
+//     User.find({ username: user })
+//         .then(results => {
+//             res.send(results)
+//         })
+//     console.log(user)
+// })
 
 
 app.listen(port, () => console.log(`App is live currently listening on port ${port}!`))
