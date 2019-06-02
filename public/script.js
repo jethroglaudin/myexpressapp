@@ -6,10 +6,26 @@ const getUserInfo = () => {
   const url = "api/showprofile/" + input;
 
   axios.get(url).then(response => {
+    const listItems = response.data.map(element => {
+      return (
+        "<li>"
+        + "Name: "
+        + element.username
+        + " | "
+        + "message: "
+        + (element.message ? element.message : " " +
+          element.username + " did not leave a message.")
+        + "</li>"
+      )
+    })
     document.querySelector("#userInfo").innerHTML = JSON.stringify(response.data);
     console.log(response)
   });
 };
+
+function displayUsers(userData, id) {
+
+}
 
 const handleSubmit = () => {
   const username = document.querySelector("#user-Name").value;
