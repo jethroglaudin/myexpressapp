@@ -1,0 +1,18 @@
+.get-all-users {
+    display: inline-block;
+    color: lightsalmon;
+    margin: 5px;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 10px;
+
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 5px;
+    text-align: left;    
+  }
